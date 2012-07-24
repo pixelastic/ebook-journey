@@ -12,4 +12,11 @@ that I had never encountered before with a lot of terminology I didn't really
 get. I stopped reading and went to look for another, more "beginner friendly"
 git book.
 
+This gave me enough git knowledge to be able to commit changes up until now
+using 
+`$ git init`
+`$ git add -A`
+`$ git commit -m "Initial commit"`
 
+This is really basic git understanding, so I'll really need to understand more
+about it.
