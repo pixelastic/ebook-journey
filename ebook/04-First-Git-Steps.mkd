@@ -1,0 +1,15 @@
+FIRST GIT STEPS
+===============
+
+Ok, so now I have written the 3 first chapters and decided to ditch Mercurial
+for Git, I need to create a git project and commit my files. How do I do that ?
+
+There are quite a lot of documentation about git online. I personnally started
+reading "Git, from bottom up" that explained git through its most fundamental
+principles (commit, trees, blobs). I like to understand how things work so
+I liked reading it, but the last chapters were dealing with real world scenario
+that I had never encountered before with a lot of terminology I didn't really
+get. I stopped reading and went to look for another, more "beginner friendly"
+git book.
+
+

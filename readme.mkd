@@ -1,0 +1,8 @@
+Firost is a url shortener, like bitly or t.co.
+
+I'll use this project to learn git, rails, TDD and REST. I'll also use this
+file to track my progress.
+
+
+
+

@@ -1,0 +1,30 @@
+
+WHAT I CHANGED
+==============
+
+I have been a Windows user for most of my life. A few years ago I bought
+a small netbook and running Windows on it was so slow, I decided to have a go
+at Ubuntu to see how it fared. Truth is, it fared very well and I had never
+seen the machine run so quick. I even took that netbook with me in New Zealand.
+
+I have to say I gradually came to like it more and more. The command-line world
+was quite new for me, used to the double click and drap world of Windows. The
+dark screen terminal was intimidating at first, especially when you type all
+those weird looking commands for the first time, but now I feel right at home.
+Being able to execute complex commands and repeat them by writing little
+scripts and chaining them is so powerful, I don't know how I ever managed
+a filesystem before without it.
+
+I also switched from Komodo Edit as my main IDE to vim. The change was drastic.
+Going to any classic IDE to vim is far more scary than moving from Windows to
+Ubuntu. Commands are even weirder on vim than on the terminal, but once again,
+the fact that you could script anything and chain them and make vim really your
+own appeals to me. Sure it took me a lot of hours to learn to use the basics of
+vim and be confortable enough to script something with it, but it was worth it.
+
+I won't go into any flaming war on which editor is the best. Whichever suits
+you best and make you write cleaner code and faster is the right choice. You
+should just try other editors once in a while or see what your coworkers are
+doing. I worked with  eclipse people, vim people, TextMate
+people, and it was vim that I liked the most. A great editor can really help
+you in writing better code and doing it faster.

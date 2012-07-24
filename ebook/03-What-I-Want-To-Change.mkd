@@ -1,0 +1,50 @@
+
+WHAT I WANT TO CHANGE
+=====================
+
+Most of my code was also written for personal projects on my own machine or for
+paid work from clients. I often had to code similar things from one client to
+another and was simply reusing what I had done before and refining it in the
+process everytime. Unfortunatly, all this was only ever visible to me and after
+I quit my job and quit freelancing it occured to me that all that time I had
+invested in my code was partially lost. I felt sad for my beloved code and
+decided to go open-source for every new projects I'll start, so even if I stop,
+others can take the project into their own hands and keep on improving it.
+
+I was also versioning my projects with Mercurial. There is nothing wrong with
+Mercurial, I like it very much. I guess I'm only using a fraction of what it
+has to offer, but it saved me quite a few times to revert to working copies and
+deploying in an emergency. But today, if you want to play with the popular kids,
+you need to be using github. As I want to go open-source in my projects,
+I absolutly need to make it easy for others to get my code, so github is the
+place to be. I currently have no experience in git, and this project will be
+a perfect playground to get started with it.
+
+I'm also quite fluent in PHP, I've been coding in PHP since PHP 3 and when
+I visualize a variable in my head, I see it prefixed with a dollar sign. But
+I'm now feeling tired of the little nasty bugs of PHP, the function naming
+inconsistencies and a lot of little things that make me thing of PHP code as
+dirty code. I've had a look at Python code and Ruby code and this seems really
+neat. Also, Rails seems a very interesting environment for developping
+websites, with a lot of good ideas. I really want to try it, and once again,
+this project will be the perfect place to try. Also, as I've spent the last
+3 years developping websites with cakePHP (which is very close to Rails in term
+of syntax) I guess the switch to Rails will be quite easy for me.
+
+There is also a work method that I've been wanting to try for a very long time
+now but never managed to get it right. I'm talking about Test Driven
+Development. This is usually easier to do right if you do it right at the start
+of the project, and do not try to implement it during the project lifetime.
+Rails is a very good environment for trying TDD because it is part of the good
+Rails practice and once again, this project will help me achieve it.
+
+And finally, as I'll be developing a web service, there is another workflow
+I want to try. This is developing the REST API interface before developing any
+UI. I think that by thinking ahead of what the project should do the overall
+development will go more smoothly. Once again, this project is the perfect
+place to try it because TDD makes testing REST API easier and Rails is very
+REST compliant, so once again this is a win-win situation.
+
+I know that the list of new things I want to learn (git, ruby+rails, tdd and
+rest api) is quite daunting but I have a clearly defined project in mind so
+we'll see where all this goes.
