@@ -20,3 +20,19 @@ using
 
 This is really basic git understanding, so I'll really need to understand more
 about it.
+
+I started reading progit, up until chapter 3, which teached me the git basics
+: adding files to the staging area and committing them. I'll need a bit more
+practice and a defined workflow to get it correctly working, though.
+
+I also added a few simple alias to my terminal config to use the most common
+git commands in a few letters. Like `ga` for `git add` or `gc` for `git
+commit`. I went as far as to reproduce some colored output for the `git log`
+method that match the one I created for Mercurial in the past.
+
+I read the "Yet Another Dotfile Repo" git config files and found some good
+ideas in it, but I still need a bit more of real life git practice to get the
+best out of it. So far I've only ever tried basic steps of adding a file to the
+staging area, removing it, commiting and reverting a commit in a test repo.
+This should be enough to get started on a real project. I'll learn the other
+important commands as I'll code.
