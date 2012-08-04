@@ -1,0 +1,25 @@
+Now, I want to learn Ruby on Rails. But before being able to run, one needs to
+be able to walk, so I'm getting this slowly and starts with first learn a bit
+of Ruby. Rails is a framework oriented in the creation of web apps, but it does
+use the underlying language Ruby. A bit like cakePHP is using PHP.
+
+I could start to learn all in one go, but I'll feel more confident first
+learning the basic steps, and then applying it to web development.
+
+So, I started reading "why (poignant) guide to Ruby". This is wonderfully well
+written and teaches you Ruby in a very poetic way. It teaches most of the more
+basic coding ideas (variable attribution, constants, false, true, nil, etc) in
+very colorful ways. Even if I knew those concepts for a very long time, seing
+them expressed like that made them even more beautiful in my eyes.
+
+Anyway, coming from a PHP background, it also let me see the beauty of Ruby.
+I can see how Ruby is a language that is more human-friendly than
+machine-friendly. The syntax seems very easy to get right. Reading the first
+chapters of the book I found a few very interesting ideas. Small one, but that
+make the whole language seem much more enjoyable.
+
+The `<<` operator for concatenation, the fact that we can add _ in numbers to
+make them more readable (`10_000`), the `unless` operand, the fact that
+operators are also methods (like `myvar == true` can be written
+`myvar.==(true)`), 
+
