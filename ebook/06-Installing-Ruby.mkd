@@ -1,0 +1,38 @@
+While on Chapter 5 of Why's guide, I needed to install Ruby to actually be able
+to play with `irb`, the interactive ruby terminal.
+
+In the past, I had tried to install Ruby, and failed miserably after a few
+hours. Fortunatly, I finally managed to get it working, and documented my steps
+on my blog. Now, I just had to re-read it and make it work, again.
+
+This time, I encountered a few other issues, so I'm now documenting it again,
+one more time.
+
+First, I need to install rvm, which will allow me install various Ruby version
+side by side and switch from one to the other.
+`bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)`
+
+Then, I update my `~/.zshrc` to add the following lines
+   [[ -r $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
+And finally, `rvm get head` and `rvm reload` to get the latest `rvm` version.
+
+At the time of writing, the latest Ruby version is 1.9.3, so I'll use `rvm` to
+install that.
+    rvm install 1.9.3
+
+When doing that, I'm prompted with a nice text telling me the dependencie list.
+bash >= 4.1, curl, git >= 1.7, patch  and a long list of `sudo apt-get
+install`.
+    /usr/bin/apt-get install build-essential openssl libreadline6
+		libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev
+		libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev
+		ncurses-dev automake libtool bison subversion
+
+Once I've installed everything I needed, I press `q` to continue the
+installation. A few minutes later, Ruby 1.9.3 was installed, and I could just
+start the `irb` prompt to test the book examples.
+
+Ok, apparently I cannot make `ri` work, it does not know anything about
+anything (`ri Kernel` returns "Nothing known about Kernel"). I guess this is
+a misconfiguration somewhere, I'll deal with that later.
