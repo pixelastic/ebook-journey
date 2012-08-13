@@ -1,0 +1,5 @@
+I'm still reading Why guide to Ruby. This is quite a long book, with funny
+stories in it. I'm also testing some of his example in `irb` or in a `.rb` file
+along the way. This takes me a longer time that I expected. I still have one or
+two more chapters to go until the end, I'm eager to start learning more abour
+Rails and start some real Ruby coding to practice a bit.
