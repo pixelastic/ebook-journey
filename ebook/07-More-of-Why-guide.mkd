@@ -1,5 +1,19 @@
 I'm still reading Why guide to Ruby. This is quite a long book, with funny
 stories in it. I'm also testing some of his example in `irb` or in a `.rb` file
 along the way. This takes me a longer time that I expected. I still have one or
-two more chapters to go until the end, I'm eager to start learning more abour
+two more chapters to go until the end, I'm eager to start learning more about
 Rails and start some real Ruby coding to practice a bit.
+
+I actually wrote my first Ruby program after reading a few more chapters. This
+is quite a simple program actually, but it fitted a need I had. It simply
+renamed all files passed as argument by capitalizing the first letter of each
+word, and skipping common words like "and", "or", "with", etc.
+
+I included the script as `smartcase.rb`. This was an interesting first
+experience and it proved much more easier to write than if I had to write in
+ZSH. I guess I'll be writing much more of this kind of scripts in Ruby now.
+
+I also tweaked vim to handle ruby color highlighting well and get my hands on
+a book named "Everyday scripting with Ruby" that looks promising. I still have
+one chapter or so to go before finishing Why's guide, and then I'll start this
+new one.
