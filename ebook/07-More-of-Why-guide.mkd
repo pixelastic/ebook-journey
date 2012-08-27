@@ -17,3 +17,25 @@ I also tweaked vim to handle ruby color highlighting well and get my hands on
 a book named "Everyday scripting with Ruby" that looks promising. I still have
 one chapter or so to go before finishing Why's guide, and then I'll start this
 new one.
+
+Finally, I wrote another Ruby program, a bit more complex, to be run in command
+line. I learned about instance variables, opening, reading and writing to files
+on disk. I also put to the test quite a bit of things learned in the book,
+namely `unless`, `case`, a lot of loops. I still have some issues understanding
+the logic on the Array `push`, `delete`, `uniq` and `sort` methods. Which one
+modifies the array and which one return a new array. Also, `uniq` and `sort` do
+not seem to be chainable if the original array is already uniq.
+
+I spend some time understanding the `File.open` syntax, and finally get the
+right way to deal with files is to give a `do` block to the `File.open` call so
+the file gets automatically closed. Also, I had to deal with UTF-8 strings.
+
+I also rapidly had to deal with ranges, `gsub`, converting arrays and
+generating random numbers. I also handle an infinite loop to ask the user for
+an answer and keep asking until the answer is correct.
+
+All in all I guess it was a pretty good test for my newly acquired Ruby skills.
+I think I have what could be thought as a "basic level" now and can move on to
+the next level.
+
+I joined the script in the repo, under the name `cesoir`.
