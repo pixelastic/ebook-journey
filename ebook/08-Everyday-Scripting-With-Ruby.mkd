@@ -1,0 +1,24 @@
+After finishing Why's guide, I moved on reading "Everyday Scripting with Ruby".
+This is a very different approach on the language. I guess it's easier to grasp
+coding with Why's way of telling stories, but this book provides real world
+examples which come in handy.
+
+I did the first batch of exercises, even if they were easy. I finally
+understood why the `Array` methods that modify the underlying array do not end
+with a `!`. That's because method with a `!` are "dangerous" methods, and the
+`!` is used to denote that there exists a non-dangerous version of this
+methods. For methods like `push` or `pop`, there can't be a version that won't
+modify the array, thus there is no need to differenciate them.
+
+While it does make sense, it still is a bit hard for me sometimes to remember
+which needs a `!` and which don't. But I guess I'll get used to it.
+
+Anyway, after reading a few chapters of this new book the author explain
+a whole process of test driven development. That's not the first time I read
+the process, and as usual, it make sens when reading it. This time, I'll force
+myself to apply it.
+
+I'll find a Ruby script to write, and will write it following the TDD
+principles. I won't go any further in reading the book until I've complete at
+least one TDD script like this. I hope that once I get it done for one script
+it will be easier to do it for any other script after that.
