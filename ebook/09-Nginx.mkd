@@ -1,0 +1,45 @@
+I haven't found a starting project to try TDD on it so far. Instead, I had to
+debug a javascript bookmarklet for my girlfriend. She found the bookmarkled on
+a website and it was supposed to highlight products in shopping website to
+easily add them to a wishlist on the (french) neeed.com website.
+
+The bookmarklet in turn was inserting a script tag into the page and loading
+the main javascript code. Unfortunatly the code was missing products and even
+producing false positive on elements that weren't products.
+
+I then downloaded the code locally and started debugging it in order to fix it.
+To ease things, I updated the bookmarklet so it was now loading the file
+locally but... Chromium has a security policy that forbid the loading of
+`file://` scripts from a bookmarklet. This a very good thing to do,
+security-wise, but I had to find another way to debug my script.
+
+It turns out that the solution was to insert the file from a local host. All
+I needed was to start Apache or another webserver locally and load the file
+from there.
+
+But I stopped using Apache a year ago in favor of Lighttpd, which was much
+faster. After a year of Lighty on a very trafic-heavy website, I started to see
+some of Lighttpd weaknesses. Namely the inhability to split log files per host,
+some memory leaks and not as much control on response headers as I would like.
+
+Overall, this is a very good piece of software, and much easier to configure
+than Apache, and faster too. But I heards a lot about nginx recently and wanted
+to see if it was now mature enough to be used. Last time I checked it was very
+promising but still in alpha stages and all the documentation was written in
+russian.
+
+After a bit of Googling, it turns that it improved a lot and is now used by big
+companies and works very well in front a Rails app.
+
+From what I gather, nginx is extremly fast for handling static files. It is
+used as the first filter of Rails applications to return static content and
+pass other request to a dedicated Rails reverse-proxy (such as Passenger or
+Thin).
+
+As I intend on learning Rails later and as I've always loved things that goes
+fast, I thought I could learn nginx now. I'll have to do it later anyway, so
+why not starting now.
+
+For my bookmarklet story I only need a local webserver that returns static
+content, that's perfect. Later, when it will be time to start doing some Rails
+testing, I'll plug in a reverse-proxy.
