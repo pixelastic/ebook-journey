@@ -1,0 +1,162 @@
+Download and configure
+======================
+
+So I started by downloading nginx from the [official
+website][http://wiki.nginx.org/Install#Source_Releases] and extracted it.
+
+Then I went to the newly created directory and ran `./configure`. I don't like
+installation scripts that put files all over my filesystem, and this is even
+more true when I'm dealing with manual installs. I follow a convention
+of putting manually installed software in `/usr/local/etc/` and the corresponding
+binaries in `/usr/local/bin`.
+
+So, when I run the `./configure` script, I need to pass a few arguments to
+specify those directories.
+
+	./configure \
+		--prefix=/usr/local/etc/nginx \
+		--sbin-path=/usr/local/bin/nginx
+
+
+PCRE libraries
+==============
+
+I had a warning about missing PCRE libraires needed for url rewriting. As
+I clearly want url rewrite capabilities, I ran :
+
+	sudo apt-get install libpcre3 libpcre3-dev
+
+And tried `./configure` again. No more PCRE warnings. The script completed up
+to the end and displayed summary information.
+
+	Configuration summary
+	+ using system PCRE library
+	+ OpenSSL library is not used
+	+ md5: using system crypto library
+	+ sha1: using system crypto library
+	+ using system zlib library
+
+OpenSSL support
+===============
+
+Hmm. I need the OpenSSL support to be able to serve https pages. Let's try
+again with the option enabled now :
+
+	./configure \
+		--prefix=/usr/local/etc/nginx \
+		--sbin-path=/usr/local/bin/nginx \
+		--with-http_ssl_module
+
+Now the output tells me that it will use the system OpenSSL library, which is
+fine. I think I'm good and can move on to the next step.
+
+Check for errors
+================
+
+You might have other warning messages at this step, depending on your system.
+It is very important that you fix all warnings before going to the next steps.
+It is also very important that you understand what you are fixing. So oftent
+have I tried to make a compiliation work by sending configuration options
+I found on google without really understanding what was going on. Almost
+everytime it go be a few weeks later when something that was supposed to work
+failed and I couldn't find why. It turns out this was the bad compilation at
+the very start that prevented the whole app for running smoothly.
+
+So once again, this is an important step. Be sure that everything is ok in the
+`./configure` output before continuing.
+
+Installing
+==========
+
+	make
+	sudo make install
+
+And we're done. Finally, I'll just create the mandatory daemon start/stop
+script in `/etc/init.d/nginx` with the following code :
+
+
+	#!/bin/sh
+
+	### BEGIN INIT INFO
+	# Provides:          nginx
+	# Required-Start:    $all
+	# Required-Stop:     $all
+	# Default-Start:     2 3 4 5
+	# Default-Stop:      0 1 6
+	# Short-Description: starts the nginx web server
+	# Description:       starts nginx using start-stop-daemon
+	### END INIT INFO
+
+
+	PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+	DAEMON=/usr/local/bin/nginx
+	INSTALL=/usr/local/etc/nginx
+	PID=/usr/local/etc/nginx/logs/nginx.pid
+	NAME=nginx
+	DESC=nginx
+
+	test -x $DAEMON || exit 0
+
+	# Include nginx defaults if available
+	if [ -f /etc/default/nginx ] ; then
+					. /etc/default/nginx
+	fi
+
+	set -e
+
+	case "$1" in
+		start)
+					echo -n "Starting $DESC: "
+					start-stop-daemon --start --quiet --pidfile $PID \
+									--exec $DAEMON -- $DAEMON_OPTS
+					echo "$NAME."
+					;;
+		stop)
+					echo -n "Stopping $DESC: "
+					start-stop-daemon --stop --quiet --pidfile $PID \
+									--exec $DAEMON
+					echo "$NAME."
+					;;
+		restart|force-reload)
+					echo -n "Restarting $DESC: "
+					start-stop-daemon --stop --quiet --pidfile $PID \
+									 --exec $DAEMON
+					sleep 1
+					start-stop-daemon --start --quiet --pidfile $PID \
+									--exec $DAEMON -- $DAEMON_OPTS
+					echo "$NAME."
+					;;
+		reload)
+				echo -n "Reloading $DESC configuration: "
+				start-stop-daemon --stop --signal HUP --quiet --pidfile $PID \
+						--exec $DAEMON
+				echo "$NAME."
+				;;
+		*)
+					N=/etc/init.d/$NAME
+					echo "Usage: $N {start|stop|restart|force-reload}" >&2
+					exit 1
+					;;
+	esac
+
+	exit 0
+
+This is mostly copy and pasted from the official script you can find on the
+official website. I simply changed the path of the executable and the pid file.
+Note I used the default path for the pid file. If you ever want to change it,
+you'll have to mirror the change in nginx config too otherwise you won't be
+able to stop the daemon with this script.
+
+You can now respectively start and stop the daemon with the following commands
+:
+	sudo /etc/init.d/nginx start
+	sudo /etc/init.d/nginx stop
+
+Also, if you ever update nginx config, you can simply update it with
+	
+	sudo /etc/init.d/nginx reload
+
+nginx is smart enough to reload the config in the background, let the running
+process run until they're done and respawn new processes with the new config.
+That way you can update config while nginx is running and not lose a single
+connection.
