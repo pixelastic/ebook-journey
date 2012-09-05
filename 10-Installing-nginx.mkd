@@ -189,12 +189,3 @@ the `http` section.
 But please, note that every directory in this path (`/`, `/var/` and
 `/var/www/`) must be executable by the `nginx` user. So you should `chmod o+x`
 all this directories.
-
-Finally, I suggest that you change the group of all files in `/var/www/` to
-`www-data`, and the group permission to `rw`. Also, you should had your user to
-the `www-data` group. That way, you can read and write files in your webroot.
-As you'll be editing a lot of files to build the website, you certainly want to
-have those permissions. The user of the files is not really relevant. It should
-be the user that created the file, and on my computer this is always me. But as
-long as you gave the correct group permissions and are part of the group, you
-should be fine.
