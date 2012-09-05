@@ -1,0 +1,31 @@
+Here I got a bit carried away from my initial idea of learning Ruby/Rails and
+I disgress a bit by testing nginx. I spend a bit of time configuring
+a localhost to access my files and tweaked vim in order to understand the nginx
+syntax (I even scripted a custom `foldtext` method to fold `server` section but
+still see their `server_name` and `listen` port).
+
+Anyway, now I have a webserver up and running, I'll go back to this bookmarklet
+this.
+
+The script loaded by the bookmarklet does not do work as expected. As I said
+before it fails to select the correct products and instead return some false
+positives. At first I intended to edit and fix it (I managed to fix the flase
+positive issue that way), but to be able to really make it work as it should
+I'll have to pretty much rewrite it.
+
+The initial script was clearly not written by someone familiar with javascript
+and the code as a great number of flaws. As it is not that big a script I find
+it might be easier to start again from scratch.
+
+And this time, I'll follow some TDD principles. I still haven't found
+a suitable practice script in Ruby, but this javascript code is the perfect
+candidate. TDD is pretty much the same for one language or another and if I had
+started working in a TDD manner, I would have applied it to all languages
+anyway.
+
+So, in order to correctly test this script I know I'll need to things : first
+a headless javascript engine, to be able to run my script without having to
+rely on a browser. This will make testing much faster. Also, I'll need
+a testing framework.
+
+Now is time for some googling.
