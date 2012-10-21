@@ -1,0 +1,28 @@
+I started writing a simple script that could change the fps (frame per second)
+of any given `.srt` file. I use it to fix subtitle files for my movies. A few
+month ago I might have written such a script in `zsh` or I could jave thought
+that too hard to do.
+
+But with my newly acquired Ruby skills, I thought I could do it. I also did it
+the TDD-way. I wrote my tests first and made them pass before going any
+further. This was actually fun to do.
+
+In the end, I ended with much more functions in my script that I usually have.
+I'm not sure what to think of that. Is that a common side-effect of TDD ? Is
+that a good thing ? I don't have enough experience of it so far to really know.
+But at least my code works and is testable.
+
+Also, I could only test the inner methods of my script, but couldn't easily
+find a way to test the command-line invocation (like when too few or too much
+arguments are given). After a bit of googling I came upon a solution that
+seemed elegant : wrapping my methods in a class and using the `initialize` to
+feed command-line arguments.
+
+This sounded nice and now I have to convert my script to a class and update the
+tests. I might even have to break the methods in several classes, each with
+their own tests. Once again, I would never have split my code that way if not
+for tests, so I'm still unsure this is the right thing to do.
+
+I've also started writing a vim plugin to display the result of my tests easily
+in a split window. I think I'll improve it to work as a syntastic-like plugin,
+firing on save at telling me if something went wrong.
