@@ -1,8 +1,15 @@
-Firost is a url shortener, like bitly or t.co.
+In 2012 I took a year off and went to New Zealand. There, I travelled a lot,
+learned a lot, and discovered a lot. I also had time to reflect on my past jobs
+and working habits and see what I wanted to change.
 
-I'll use this project to learn git, rails, TDD and REST. I'll also use this
-file to track my progress.
+I used to work as a freelancer for small companies, doing mostly PHP, CSS and
+Javascript, sometimes having to configure a server or two, but doing most of my
+dev work on a Windows XP machine.
 
+I now work exclusively on Ubuntu, use git in my day-to-day work and code using
+vim. This repository holds my notes and thoughts while I'm learning Ruby and
+a lot of other things along the way.
 
-
-
+I often wander off the initial track and have a go at things like node, redis,
+mongodb, less, and co but my goal is to grasp Ruby (and Rails) enough to be
+able to build a web app I have in mind.
