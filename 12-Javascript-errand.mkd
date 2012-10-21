@@ -1,0 +1,34 @@
+So I found phantomjs and its little sister casperjs to test javascript files.
+I tried it a little bit, with some simple examples and it looks very
+interesting.
+
+I have been coding in Javascript for the past years so I know a bit about the
+language already. But Javascript is getting more and more popular now, and used
+as well in client side and in serverside. And the language has some very good
+things in it as well as some very bad one.
+
+I used to work with the Backbone/Underscore set of tools when I used
+Javascript, but this was quite new when I used it and there wasn't a lot of
+books on the subject at that time.
+
+I found an interesting book about Backbone (Backbone Fundamentals) that
+I started reading, but I soon realize that I needed a strong reminder of the
+special features of Javascript first. So I started reading reading "Eloquent
+Javascript" and will surely continue with "Essential Javascript Design
+Patterns" and test what I learn by doing the "js-assesments" tests.
+
+I did the various examples in the Eloquent Javascript as I read the book but
+I soon discovered that my current editor (vim) wasn't doing a very good job at
+telling me what was wrong in my code. I then started fiddling with the
+syntastic plugin and jshint. In the meantime I read about jslint and jshint and
+this simply confirmed that my current knowledge of the language was a bit too
+shaky.
+
+I managed to install jshint correctly (and installed nodejs at the same time,
+something that I remember failing to do one year ago).
+
+I didn't push my reading of the Javascript books any further, though. I had to
+ditch this whole bookmarklet/javascript thing for a while and get back on track
+on Ruby because I finally found the perfect toy project to learn TDD alongside
+Ruby.
+
