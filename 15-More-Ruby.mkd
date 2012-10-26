@@ -1,0 +1,18 @@
+I started refactoring my ruby code to classes and updated the tests
+accordingly. I think I now start to understand the "warm" feeling people
+advocating TDD are talking about. I feel more relaxed committing my changes and
+closing my laptop when I know all the tests pass. I know I did a good job.
+
+[Horst](http://github.com/pixelastic/horst) (because that's its name) is now
+uploaded on github. At the moment this is just a bunch of methods organized in
+3 classes and I haven't written the code to tie it together so it can be
+invoked on the command line. Once this is done, it will be able to change
+a subtitle fps.
+
+Anyway, I now use Ruby much more in my day-to-day life. I recently had to move
+and rename stuff in my Comic Book folder and Ruby helped a lot in moving each
+file in a directory of the same name. I also had to rename 5Go of mp3 and a mix
+of `exiftool`, `jq` and `ruby` helped me give them all meaningful names based
+on their ID3 tags.
+
+I think I can resume reading the Ruby book now.
