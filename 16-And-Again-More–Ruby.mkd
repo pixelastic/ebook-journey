@@ -1,0 +1,41 @@
+I finally finished packing Horst in as a command line tool, with the whole set
+of tests. I can now change the fps of an srt file. Maybe I'll update later to
+resynch a subtitle file.
+
+I found that working in a TDD style made me create a lot more functions and
+classes that I would normally do. This make the testing easier as I can easily
+test only one small part of the full app, but this also make it harder for me
+to get the big picture in my head. Connections between each part are not as
+clear as they were when the code was one big block.
+
+I do not know if TDD is to blame or my current poor skills at Ruby.
+
+Anyway, the other day I wanted to create a wrapper got `git branch list` that
+would color the branches according to their names. I've started using the "git
+flow" workflow, by nvie, and it involves a master and a develop main branche as
+well as a bunch of other branches prefixed with feature/, release/ and hotfix/.
+
+To make things easier to spot, I colored branches based on these special names
+and prefix. I started coding it in zsh, but soon discarded it and rewrote it in
+ruby. I thought it would be easy, but as soon as it appears that it was not so
+trivial, I feel like I needed tests.
+
+So I created a test file and started adding my tests, seeing them fail, then
+coding the feature. I really like the finished code because I am assured that
+it is working, and that I would spot any modification that would break it.
+
+The whole testing/coding process is still a bit awkward. I have to vim
+instances (yeah, I know I should learn to split vim windows correctly), one for
+coding and one for testing.
+
+I've also put a bunch of utility functions into a plugin to automatically test
+a file whenever I press F5. I want to improve this system to parse the Ruby
+output and in the end just display a green tick when everything is good or
+marking the lines with errors otherwise.
+
+I've also resumed reading the Ruby book. I learnt a bit more about regexp and
+some real world example of web scraping. I'm about mid-way in the book and
+I want to have it done so I can start learning Rails and more about the REST
+principles.
+
+I think I might start reading more about REST before finishing the Ruby book.
