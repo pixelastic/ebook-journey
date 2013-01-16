@@ -1,0 +1,38 @@
+I'm not sure if I finished the Ruby book or not. Actually I've started reading
+more about API design and REST. I have a pretty clear project in mind,
+something quite simple but that could "scratch my own itch" and maybe in turn
+be useful to others.
+
+But as it turns out, I think I might not learn Rails right now as nodejs seems
+more suitable to the task. And, I must confess, I want to learn nodejs, I like
+javascript and the whole nodejs thing seems very appealing to me.
+
+Well, as you can see, I'm going in a lot of different directions, starting to
+learn something, going another route, learning something else. I guess I've
+always done that, but writing about it make it a lot more obvious.
+
+I haven't been writing a lot lately, I forgot about this project and I wasn't
+very thorough in my studying, mostly going from one project to another.
+
+I recently had a look in my project folders and I did start a few of them.
+There was a CSS lexer/parser. I had been wanting to write a lexer for a long
+time, this seems something quite interesting to code, and I am pretty sure
+I could find a use for in for CSS.
+
+I also wrote or rewrote synchronization scripts for my ebooks and my games on
+my gaming console. Something in ruby that does copy files from my hard drive to
+my devices, selecting only the relevant files, putting them in the right place,
+and backing up saved games from my device to a repo.
+
+I must say this was quite simple to do in Ruby, and also quite amusing to do.
+I did write a few scripts like that in the last weeks, symplifying a lot my
+previous zsh/rsync scripts.
+
+Now, I'd really want to get started on my personnal project but I do not really
+know if I should continue writing in this project or start a new one. I guess
+I should start a new one, and keep writing about my progress or complete change
+of direction (once again). After all, this project was supposed to be about an
+url shortener at first, wasn'it ?
+
+
+
